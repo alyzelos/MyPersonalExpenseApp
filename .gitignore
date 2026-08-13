@@ -28,6 +28,8 @@ out/
 ####################################
 ExpenseApp/API/bin/
 ExpenseApp/API/obj/
+ExpenseApp/API/.vs/
+ExpenseApp/API/.vscode/
 
 ####################################
 # Rider
