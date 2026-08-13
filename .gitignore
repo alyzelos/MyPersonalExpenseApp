@@ -7,6 +7,12 @@
 /.angular/
 .angular/
 
+# Build results (global)
+bin/
+obj/
+out/
+
+
 # Node modules and dependency files
 /node_modules/
 /package-lock.json
