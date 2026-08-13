@@ -1,4 +1,4 @@
-using System;
+
 using API.Entities;
 using Microsoft.EntityFrameworkCore;
 
@@ -6,6 +6,6 @@ namespace API.Data;
 
 public class DataContext(DbContextOptions options) : DbContext(options)
 {
-    public DbSet<Expenses> Expense { get; set; }
-    public DbSet<Categories> Category { get; set; }
+    public DbSet<Expense> Expenses { get; set; }
+    public DbSet<Category> Categories { get; set; }
 }

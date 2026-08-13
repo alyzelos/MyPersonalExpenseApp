@@ -2,7 +2,7 @@ using System;
 
 namespace API.Entities;
 
-public class Expenses
+public class Expense
 {
     public int Id { get; set; } 
     public required decimal Amount { get; set; }
