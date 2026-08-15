@@ -30,6 +30,7 @@ ExpenseApp/API/bin/
 ExpenseApp/API/obj/
 ExpenseApp/API/.vs/
 ExpenseApp/API/.vscode/
+ExpenseApp/node_modules/
 
 ####################################
 # Rider
