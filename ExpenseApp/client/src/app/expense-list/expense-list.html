@@ -1,0 +1,12 @@
+<div class="container">
+  <h2>Expenses List</h2>
+  
+  <ul>
+    @for (category of categories; track $index) {
+      <li>
+        {{category.id}} - {{category.type}}
+      </li>
+    }
+  </ul>
+
+</div>

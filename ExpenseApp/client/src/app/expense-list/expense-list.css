@@ -1,0 +1,3 @@
+.container::ng-deep * {
+  align-items: center !important;
+}

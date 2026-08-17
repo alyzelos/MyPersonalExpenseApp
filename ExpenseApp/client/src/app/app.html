@@ -1,8 +1,3 @@
-<h1>{{title()}}</h1>
-<ul>
-  @for (item of categories; track $index) {
-    <li>
-      {{item.id}} - {{item.type}}
-    </li>
-  }
-</ul>
+<app-navigation-bar></app-navigation-bar>
+<router-outlet></router-outlet>
+
