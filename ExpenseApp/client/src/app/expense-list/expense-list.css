@@ -1,3 +1,7 @@
 .container::ng-deep * {
   align-items: center !important;
 }
+
+mat-grid-tile {
+  background: lightblue;
+}

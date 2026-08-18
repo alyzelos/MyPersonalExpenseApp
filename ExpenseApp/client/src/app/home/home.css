@@ -1,8 +1,20 @@
 .example-card {
+  display: flex;
   max-width: 400px;
+  margin: 10px;
+  padding: auto;
 }
 
 .example-header-image {
   background-image: url('https://material.angular.dev/assets/img/examples/shiba1.jpg');
   background-size: cover;
+}
+
+.screen-wrapper {
+  align-content: center;
+  display: flex;
+  justify-content: center; /* Centers horizontally */
+  min-height: 2vh;       /* Forces the wrapper to take full screen height */
+  width: 100%;             /* Ensures full width coverage */
+  box-sizing: border-box;  /* Prevents padding from causing scrollbars */
 }
