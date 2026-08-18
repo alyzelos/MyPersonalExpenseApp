@@ -5,9 +5,3 @@
 .lagunaSeca {
   background-color: #FFD701;
 }
-
-.blackDivider {
-   @include mat.divider-overrides((
-    color: orange,
-  ));
-}
