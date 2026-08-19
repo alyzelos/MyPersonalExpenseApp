@@ -8,13 +8,24 @@
 <div class="title">
   <h2>Expenses List</h2>
 </div>
+<div class="container screen-wrapper">
+  <mat-card class="example-card" appearance="outlined">
+    <mat-card-header>
+      <div mat-card-avatar class="example-header-image"></div>
+      <mat-card-title>Welcome to Expenses Section of the App</mat-card-title>
+      <mat-card-subtitle>Track expense month by month</mat-card-subtitle>
+    </mat-card-header>
+    <!-- <img mat-card-image src="expesesbackground.jpg" alt="Expense App"> -->
+    <mat-card-content>
+      <p>
+        Mostlikely here we will have a table
+      </p>
+    </mat-card-content>
+    <mat-card-actions>
+      <button matButton>TBD 1</button>
+      <button matButton>TBD 2</button>
+    </mat-card-actions>
+  </mat-card>
+</div>
   
-  <ul>
-    @for (category of categories; track $index) {
-      <li>
-        {{category.id}} - {{category.type}}
-      </li>
-    }
-  </ul>
-
 </div>

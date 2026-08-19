@@ -2,14 +2,26 @@
   align-items: center !important;
 }
 
-mat-grid-tile {
-  background: lightblue;
-}
-
 .title {
   padding: 5px;
   margin-left: 25px;
   text-decoration: underline;
   text-decoration-color: #FFD701 ;
   text-decoration-thickness: 5px;
+}
+
+.example-card {
+  display: flex;
+  max-width: auto;
+  margin: 20px;
+  padding: 20px;
+}
+
+.screen-wrapper {
+  align-content: center;
+  display: flex;
+  justify-content: center; /* Centers horizontally */
+  min-height: 2vh;       /* Forces the wrapper to take full screen height */
+  width: 100%;             /* Ensures full width coverage */
+  box-sizing: border-box;  /* Prevents padding from causing scrollbars */
 }

@@ -1,1 +1,11 @@
-<p>categories works!</p>
+<div class="title">
+  <h2>Available Categories</h2>
+</div>
+
+  <ul>
+    @for (category of categories; track $index) {
+      <li>
+        {{category.id}} - {{category.type}}
+      </li>
+    }
+  </ul>
