@@ -6,10 +6,11 @@ import { RouterOutlet } from '@angular/router';
 import { MatCard, MatCardHeader, MatCardModule } from "@angular/material/card";
 import { Expenses } from '../Interfaces/expenses';
 import { ExpenseService } from '../_services/expense-service';
+import { MatDivider, MatDividerModule } from '@angular/material/divider';
 
 @Component({
   selector: 'app-expense-list',
-  imports: [RouterOutlet, NgFor, NavigationBar, MatCard, MatCardHeader, MatCardModule],
+  imports: [MatCard, MatCardHeader, MatCardModule, MatDividerModule, MatDivider],
   templateUrl: './expense-list.html',
   styleUrl: './expense-list.css',
 })

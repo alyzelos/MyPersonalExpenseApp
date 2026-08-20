@@ -1,39 +1,17 @@
 <div class="title">
   <h2>Available Categories</h2>
 </div>
-<mat-divider></mat-divider>
-<p>Show categories trough OnInit getFunction;</p>
-  <ul>
-    @for (category of categories; track $index) {
-      <li>
-        {{category.id}} - {{category.type}}
-      </li>
-    }
-  </ul>
-
-<mat-divider></mat-divider>
-<div>
-  <p>Categories with observable</p>
-  <div *ngIf="category$ | async as data">{{ data.type}}</div>
-</div>
-<div>
-  <ul>
-    <!-- @for (item of category$; track $index) {
-      <li>{{item.id}}-{{item.type}}</li>
-    } -->
-  </ul>
-  <p>!!!!!!! NOT WORKING ====> TO INVESTIGATE & ELABORATE</p>
-</div>
 
 <div>
   <mat-divider></mat-divider>
-  <div>
-    <p>Trial with BehaviorSubject</p>
-    <div>
-      <div *ngIf="data$ | async as data">{{ data.type }}</div>
-    </div>
-    <p>!!!!!!! NOT WORKING ====> TO INVESTIGATE & ELABORATE</p>
+  <p>Categories with observable</p>
+</div>
+<div>
+  <div *ngIf="categories$ | async as categories">
+  <div *ngFor="let category of categories">
+    <p>{{category.id}} -> {{ category.type }}</p>
   </div>
+</div>
 </div>
 
 <div>
