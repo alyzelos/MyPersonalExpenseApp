@@ -20,6 +20,17 @@
       <p>
         Mostlikely here we will have a table
       </p>
+      <!-- <div>
+        @if(expense()){
+          <div> {{ expense()?.id}}</div>
+          <div> {{expense()?.amount}}</div>
+          <div> {{expense()?.expenseName}}</div>
+          <div> {{expense()?.date}}</div>
+          <div> {{expense()?.details}}</div>
+        }
+       </div> -->
+
+      
     </mat-card-content>
     <mat-card-actions>
       <button matButton>TBD 1</button>
@@ -29,3 +40,12 @@
 </div>
   
 </div>
+
+<div>
+  @for (item of expense(); track item.id) {
+    <div>{{item.id}}-{{item.expenseName}}-{{item.date}}-{{item.amount}}-{{item.details}}</div>
+  }@empty {
+    <p>No Expense</p>
+  }
+</div>
+    

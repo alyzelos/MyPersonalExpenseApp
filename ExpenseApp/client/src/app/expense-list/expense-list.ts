@@ -14,18 +14,12 @@ import { ExpenseService } from '../_services/expense-service';
   styleUrl: './expense-list.css',
 })
 export class ExpenseList implements OnInit {
-  http = inject(HttpClient);
+  private http = inject(HttpClient);
   expenseService = inject(ExpenseService);
   // expense = signal<Expenses | null>(null);
-  expense: any;
+  expense = this.expenseService.expenses;
   
-  ngOnInit(): void {
-    this.expense = this.expenseService.getExpenses();
-    console.log('===> expense-list component => result of ngOnInit');
+  ngOnInit() {
+    this.expenseService.getExpenses();
   }
-
-
- 
-  
-
 }
