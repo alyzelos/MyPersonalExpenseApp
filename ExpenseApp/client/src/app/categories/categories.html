@@ -1,7 +1,8 @@
 <div class="title">
   <h2>Available Categories</h2>
 </div>
-
+<mat-divider></mat-divider>
+<p>Show categories trough OnInit getFunction;</p>
   <ul>
     @for (category of categories; track $index) {
       <li>
@@ -9,3 +10,42 @@
       </li>
     }
   </ul>
+
+<mat-divider></mat-divider>
+<div>
+  <p>Categories with observable</p>
+  <div *ngIf="category$ | async as data">{{ data.type}}</div>
+</div>
+<div>
+  <ul>
+    <!-- @for (item of category$; track $index) {
+      <li>{{item.id}}-{{item.type}}</li>
+    } -->
+  </ul>
+  <p>!!!!!!! NOT WORKING ====> TO INVESTIGATE & ELABORATE</p>
+</div>
+
+<div>
+  <mat-divider></mat-divider>
+  <div>
+    <p>Trial with BehaviorSubject</p>
+    <div>
+      <div *ngIf="data$ | async as data">{{ data.type }}</div>
+    </div>
+    <p>!!!!!!! NOT WORKING ====> TO INVESTIGATE & ELABORATE</p>
+  </div>
+</div>
+
+<div>
+  <mat-divider></mat-divider>
+  <div>
+    <p>Signal trial using service</p>
+    <div>
+      <ul>
+        @for (item of cat(); track $index) {
+          <li>{{item.id}}-{{item.type}}</li>
+        }
+      </ul>
+    </div>
+  </div>
+</div>
