@@ -15,9 +15,9 @@ export class CategoryService {
   private _categoriesSubject$ = new BehaviorSubject<Category[]>([]);
   public categories$: Observable<Category[]> =  this._categoriesSubject$.asObservable();
   // method for observables: 
-  get currentCategories(): Category[] {
-    return this._categoriesSubject$.value;
-  }
+  // get currentCategories(): Category[] {
+  //   return this._categoriesSubject$.value;
+  // }
 
   getCategories(): void {
     this.http.get<Category[]>('https://localhost:5001/api/categories').pipe(

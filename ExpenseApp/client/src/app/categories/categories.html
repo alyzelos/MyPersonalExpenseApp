@@ -8,10 +8,10 @@
 </div>
 <div>
   <div *ngIf="categories$ | async as categories">
-  <div *ngFor="let category of categories">
-    <p>{{category.id}} -> {{ category.type }}</p>
+   <div *ngFor="let category of categories">
+     <p>{{category.id}} -> {{ category.type }}</p>
+   </div>
   </div>
-</div>
 </div>
 
 <div>

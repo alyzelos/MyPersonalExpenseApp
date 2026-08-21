@@ -1,47 +1,27 @@
 <div class="container">
-  <!-- <mat-grid-list cols="1" rowHeight="2:1">
-  <mat-grid-tile>1</mat-grid-tile>
-  <mat-grid-tile>2</mat-grid-tile>
-  <mat-grid-tile>3</mat-grid-tile>
-  <mat-grid-tile>4</mat-grid-tile> -->
-<!-- </mat-grid-list> -->
-<div class="title">
-  <h2>Expenses List</h2>
+  <div class="title">
+    <h2>Expenses List</h2>
+  </div>
+  <mat-divider></mat-divider>
+  <div class="container screen-wrapper">
+    <mat-card class="example-card" appearance="outlined">
+      <mat-card-header>
+        <div mat-card-avatar class="example-header-image"></div>
+        <mat-card-title>Welcome to Expenses Section of the App</mat-card-title>
+        <mat-card-subtitle>Track expense month by month</mat-card-subtitle>
+      </mat-card-header>
+      <!-- <img mat-card-image src="expesesbackground.jpg" alt="Expense App"> -->
+      <mat-card-content>
+        <p>
+          Mostlikely here we will have a table
+        </p> 
+      </mat-card-content>
+      <mat-card-actions>
+        <button matButton>TBD 1</button><button matButton>TBD 2</button>
+      </mat-card-actions>
+    </mat-card>
+  </div>
 </div>
-<mat-divider></mat-divider>
-<div class="container screen-wrapper">
-  <mat-card class="example-card" appearance="outlined">
-    <mat-card-header>
-      <div mat-card-avatar class="example-header-image"></div>
-      <mat-card-title>Welcome to Expenses Section of the App</mat-card-title>
-      <mat-card-subtitle>Track expense month by month</mat-card-subtitle>
-    </mat-card-header>
-    <!-- <img mat-card-image src="expesesbackground.jpg" alt="Expense App"> -->
-    <mat-card-content>
-      <p>
-        Mostlikely here we will have a table
-      </p>
-      <!-- <div>
-        @if(expense()){
-          <div> {{ expense()?.id}}</div>
-          <div> {{expense()?.amount}}</div>
-          <div> {{expense()?.expenseName}}</div>
-          <div> {{expense()?.date}}</div>
-          <div> {{expense()?.details}}</div>
-        }
-       </div> -->
-
-      
-    </mat-card-content>
-    <mat-card-actions>
-      <button matButton>TBD 1</button>
-      <button matButton>TBD 2</button>
-    </mat-card-actions>
-  </mat-card>
-</div>
-  
-</div>
-
 <div>
   @for (item of expense(); track item.id) {
     <div>{{item.id}}-{{item.expenseName}}-{{item.date}}-{{item.amount}}-{{item.details}}</div>
@@ -49,4 +29,19 @@
     <p>No Expense</p>
   }
 </div>
-    
+<p></p>
+<mat-divider></mat-divider>
+<p>Retrieve Expenses trough observable</p>
+<!-- <div *ngIf="expenseList$ | async as expenseList">
+  <div *ngFor="let expItem of expenseList">
+    <p>{{expItem.id}}-{{expItem.amount}}-{{expItem.expenseName}}-{{expItem.date}}-{{expItem.details}}</p>
+  </div>
+</div> -->
+
+@for (expItem of (expenseList$ | async); track expItem.id) {
+  <div>
+    <p>{{expItem.id}}-{{expItem.amount}}-{{expItem.expenseName}}-{{expItem.date}}-{{expItem.details}}</p>
+  </div>
+} @empty {
+  <p>No expenses found or data is loading.</p>
+}
